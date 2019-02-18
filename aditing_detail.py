@@ -22,7 +22,7 @@ def get_xuexin(html):
     # 学信信息
     detail_compile = re.compile(r'<td><b>姓名:</b>(\w+)</td>', re.S)
     xuexin_name = re.findall(detail_compile, html)  # 姓名
-    if len(xuexin_name) > 0 and xuexin_name[0] != '肖振华':
+    if len(xuexin_name) > 0 and xuexin_name[0] != 'XXX':
         xuexin_name = xuexin_name[0]
         detail_compile = re.compile(r'<td><b>性别:</b>(\w+)</td>', re.S)
         xuexin_sexy = re.findall(detail_compile, html)[0]  # 性别
