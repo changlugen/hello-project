@@ -98,7 +98,7 @@ def get_family_identity(html):
 
 
 def get_credit91(html):
-    # 91征信
+    # 91
     detail_compile = re.compile(r'>申请借款 (\d+) 笔</td>', re.S)
     apply_times = re.findall(detail_compile, html)  # 申请笔数
     # print(apply_times)
@@ -122,6 +122,6 @@ def get_credit91(html):
         payment = None
         money = None
     credit_detail = [apply_times, loan_times, refuse_times, payok, payment, money]
-    credit91_dict = {'91征信': credit_detail}
+    credit91_dict = {'91credit': credit_detail}
     # print(credit91_dict)
     return credit91_dict
